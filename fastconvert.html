@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Convert</title>
+    <link rel="icon" href="path-to-your-favicon.ico" type="image/x-icon" />
+    <label class="switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+
+  </label>
+  
+    <style>
+        /* General body styling */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f6f9; /* Light background for modern feel */
+          color: #333; /* Default text color */
+        }
+      
+        /* Header section */
+        header {
+          background-color: #007bff; /* Vibrant blue */
+          color: white;
+          text-align: center;
+          padding: 20px 0;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      
+        header h1 {
+          margin: 0;
+          font-size: 2.5rem;
+        }
+      
+        header p {
+          font-size: 1rem;
+          margin: 5px 0 0;
+        }
+      
+        /* Navigation bar */
+        nav {
+          background-color: #343a40; /* Darker gray for contrast */
+          padding: 10px 0;
+          text-align: center;
+        }
+      
+        nav a {
+          color: white;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease-in-out;
+        }
+      
+        nav a:hover {
+          background-color: #007bff; /* Highlight on hover */
+        }
+      
+        /* Main container */
+        .container {
+          max-width: 800px;
+          margin: 40px auto;
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        h2 {
+          text-align: center;
+          color: #007bff;
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+      
+        /* Input group styling */
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+      
+        select, input[type="number"] {
+          width: 90%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+        }
+      
+        button {
+          background-color: #28a745; /* Vibrant green for call-to-action */
+          color: white;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+        }
+      
+        button:hover {
+          background-color: #218838; /* Darker green on hover */
+        }
+      
+        /* Result styling */
+        #result {
+          margin-top: 20px;
+          font-size: 1.2rem;
+          text-align: center;
+          color: #333;
+          font-weight: bold;
+        }
+      
+        /* Footer styling */
+        footer {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 0.9rem;
+          color: #666;
+        }
+      </style>
+      
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastConvert - Features</title>
+    <style>
+      footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid #fff;
+    transition: 0.3s;
+}
+
+footer:hover {
+    background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff758c);
+    transform: scale(1.02);
+}
+
+        /* Styling the Navigation */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Styling */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Toggle Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+* {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+
+    </style>
+    <style>
+      .tip-modal {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        width: 90%;
+        color: black;
+      }
+      
+      .close-button {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      </style>
+      
+    </div>
+    
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <a href="#">Features</a>
+            <button onclick="openChart()">Open Live Bitcoin Chart</button>
+
+<script>
+    function openChart() {
+        window.open('chart.html', '_self');
+    }
+</script>
+
+
+              
+                <!-- You can add more features here -->
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Live Bitcoin Chart</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #105327;
+                            margin: 0;
+                            padding: 0;
+                            text-align: center;
+                        }
+                        .chart-container {
+                            margin: 50px auto;
+                            max-width: 1200px;
+                        }
+                        h1 {
+                            color: #333;
+                        }
+                    </style>
+                </head>
+                <body>
+                
+                   
+                
+        </div>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+        <button onclick="openTipModal()" class="tip-button">
+          💸 Tip the Developer
+        </button>
+<!-- Tip Modal (Hidden by Default) -->
+<div id="tipModal" class="tip-modal" style="display: none;"> 
+  <div class="modal-content">
+    <span onclick="closeTipModal()" class="close-button">&times;</span>
+    <h3>Tip the Developer 💖</h3>
+    <p>Support the work behind Fast Convert!</p>
+
+    <strong>M-Pesa Number:</strong> 0741055452<br>
+    <strong>Account:</strong> FASTCONVERT<br><br>
+
+    <strong>LIGHTNING BTC Address:</strong>
+    <code>restedjute82@walletofsatoshi.com</code><br>
+    <strong>ETH Address:</strong>
+    <code>0x39df2d368af173e9eee6e5891332904397f8425c</code><br><br>
+
+    <p>Asante sana for the support! 🙏</p>
+  </div>
+</div>
+        
+
+   
+</div>
+
+    </nav>
+
+    <!-- Content of the page, where the chart will be displayed -->
+    <div class="content">
+        <h1>Welcome to FastConvert</h1>
+        <p>Your reliable tool for converting Worldcoin and Bitcoin to Kenyan Shillings.</p>
+    </div>
+    <footer style="text-align: center; padding: 10px; background-color: #222; color: white; position: fixed; bottom: 0; width: 100%;">
+      &copy; 2025 Fast Convert. All Rights Reserved. | Built with ❤️ by Gr8jeff
+  </footer>
+  <script src="darktheme.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function openTipModal() {
+      document.getElementById('tipModal').style.display = 'flex';
+    }
+    function closeTipModal() {
+      document.getElementById('tipModal').style.display = 'none';
+    }
+    </script>
+    
+    
+
+  
+</body>
+</html>
+            <a href="https://www.instagram.com/carriyaos/profilecard/?igsh=MXd3YzlnYmdsaHNqaA==" target="_blank">Contact</a>
+          </nav>
+          
+    </nav>
+    <div class="container">
+        <h2>Convert Cryptocurrency to KSh</h2>
+        <div class="input-group">
+          <select id="cryptoType">
+            <option value="worldcoin">Worldcoin</option>
+            <option value="bitcoin">Bitcoin</option>
+            <option value="ethereum">Ethereum</option>
+        
+</select>
+        <input type="number" id="cryptoAmount" placeholder="Enter amount" min="0" />
+        <button id="convertButton" onclick="convertToKSH()">Convert to KSh</button>
+        <p id="price-display" style="text-align: center; margin-top: 10px;"></p>
+       
+        </div>
+        <div id="result"></div>
+        <script src="fetchETHPrice.js"></script>
+<script>
+    const cryptoSelect = document.querySelector('select');
+    const convertBtn = document.querySelector('button');
+
+    convertBtn.addEventListener('click', () => {
+        const selectedCrypto = cryptoSelect.value;
+
+        if (selectedCrypto === 'bitcoin') {
+            fetchBTCPrice();
+        } else if (selectedCrypto === 'ethereum') {
+            fetchETHPrice();
+        }
+    });
+</script>
+ 
+
+    <!-- JavaScript code goes here -->
+    <script>
+    async function getExchangeRateInUSD(cryptoType) {
+        let symbol = "";
+        switch (cryptoType.toLowerCase()) {
+            case "bitcoin":
+                symbol = "BTCUSDT";
+                break;
+            case "ethereum":
+                symbol = "ETHUSDT";
+                break;
+            case "worldcoin":
+                symbol = "WLDUSDT"; // Assuming WLDUSDT is the correct symbol on Binance
+                break;
+            default:
+                console.error("Unsupported crypto type:", cryptoType);
+                alert(`Unsupported cryptocurrency: ${cryptoType}`);
+                return null;
+        }
+
+        if (!symbol) return null;
+
+        try {
+            const response = await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${symbol}`);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({ msg: "Unknown API error" }));
+                console.error(`Error fetching ${symbol} price: ${response.status}`, errorData);
+                alert(`Failed to fetch price for ${symbol}. API error: ${response.status} ${errorData.msg || ''}`);
+                return null;
+            }
+            const data = await response.json();
+            if (data.price) {
+                return parseFloat(data.price);
+            } else {
+                console.error(`Price not found for ${symbol} in API response:`, data);
+                alert(`Price not available for ${symbol}.`);
+                return null;
+            }
+        } catch (error) {
+            console.error(`Error fetching exchange rate for ${symbol}:`, error);
+            alert(`An error occurred while fetching the price for ${symbol}.`);
+            return null;
+        }
+    }
+
+    async function convertToKSH() {
+        const cryptoType = document.getElementById("cryptoType").value;
+        const cryptoAmount = parseFloat(document.getElementById("cryptoAmount").value);
+
+        if (isNaN(cryptoAmount) || cryptoAmount <= 0) {
+            document.getElementById("result").innerText = "Please enter a valid amount.";
+            return;
+        }
+
+        const usdRate = await getExchangeRateInUSD(cryptoType);
+        if (usdRate === null) {
+            document.getElementById("result").innerText = `Failed to fetch price for ${cryptoType}. Please try again.`;
+            return; 
+        }
+
+        const usdToKesRate = 129; // USD to KES conversion rate
+        const kshAmount = cryptoAmount * usdRate * usdToKesRate;
+        document.getElementById("result").innerText = 
+            `${cryptoAmount} ${cryptoType.charAt(0).toUpperCase() + cryptoType.slice(1)} is approximately ${kshAmount.toLocaleString()} KSh`;
+    }
+</script>
