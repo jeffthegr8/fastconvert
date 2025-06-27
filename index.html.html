@@ -407,6 +407,10 @@ input:checked + .slider:before {
             <option value="worldcoin">Worldcoin</option>
             <option value="bitcoin">Bitcoin</option>
             <option value="ethereum">Ethereum</option>
+            <option value="solana">Solana</option>
+            <option value="cardano">Cardano</option>
+            <option value="xrp">XRP</option>
+            <option value="dogecoin">Dogecoin</option>
         
 </select>
         <input type="number" id="cryptoAmount" placeholder="Enter amount" min="0" />
@@ -445,6 +449,18 @@ input:checked + .slider:before {
                 break;
             case "worldcoin":
                 symbol = "WLDUSDT"; // Assuming WLDUSDT is the correct symbol on Binance
+                break;
+            case "solana":
+                symbol = "SOLUSDT";
+                break;
+            case "cardano":
+                symbol = "ADAUSDT";
+                break;
+            case "xrp":
+                symbol = "XRPUSDT";
+                break;
+            case "dogecoin":
+                symbol = "DOGEUSDT";
                 break;
             default:
                 console.error("Unsupported crypto type:", cryptoType);
