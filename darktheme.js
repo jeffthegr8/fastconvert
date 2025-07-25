@@ -17,5 +17,5 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.add("dark-mode");
             localStorage.setItem("dark-mode", "enabled");
         }
-    });
+    );
 });
